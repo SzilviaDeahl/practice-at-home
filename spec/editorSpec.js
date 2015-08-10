@@ -1,7 +1,9 @@
-var editor = require('../src/editor')
+var Editor = require('../src/editor')
 
 describe('Editor', function () {
-    it('it works', function () {
-        expect(1 + 2).toEqual(3);
-    });
+  it('it adds a line to the editor', function () {
+    var editor = new Editor();
+    editor.write("Once upon a time at Galvanize...")
+    expect(editor.lines[0]).toEqual("Once upon a time at Galvanize...");
+  });
 });
