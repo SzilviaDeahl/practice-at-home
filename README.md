@@ -90,7 +90,7 @@ Then the most recently added lines continue to be deleted
 ```
 When I call the `undo` function
 And the object has no lines
-Then I am notified that the editor has no lines
+Then `undo` will `throw` an error "This editor has no lines"
 ```
 
 ### User can search lines for a given word
@@ -123,8 +123,8 @@ And the notification states that the given word was replaced `n` times
 ```
 When I call the `replace` function
 And the given word does not exist in any lines
-Then I receive a notification
-And the notification states that the given word does not exist
+Then an error is thrown
+And I am notified that the given word does not exist
 ```
 
 ## More
