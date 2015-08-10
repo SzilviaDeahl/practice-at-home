@@ -51,7 +51,7 @@ After any necessary refactoring, you should `add` and `commit` your work using d
 Given I have an instance of the Editor object
 When I call the `write` function on that object
 And pass the string `Once upon a time at Galvanize...` as an argument
-Then the state of the `lines` property of that object should include that string argument.
+Then the state of the `lines` property of that object includes that string argument.
 ```
 
 ### #2
@@ -59,15 +59,15 @@ Then the state of the `lines` property of that object should include that string
 Given I have an instance of the Editor object
 And that instance has a `lines` property with a length of 3
 And I add another line to that object
-Then the length of the lines property should be 4
+Then the length of `lines` is 4
 ```
 
 ### User can print all the lines of a given editor
 ### #3
 ```
 When I call the `toString` function on the object
-Then that object's lines should be returned as a string.
-And, each line should start with a new line
+Then that object's lines are returned as a string.
+And each line starts with a new line (line break)
 ```
 
 ### User can remove lines from an editor
@@ -86,7 +86,7 @@ Then the most recently added lines continue to be deleted
 ```
 When I call the `undo` function
 And the object has no lines
-Then the user should be notified that the editor has no lines
+Then I am notified that the editor has no lines
 ```
 
 ### User can search lines for a given word
@@ -106,8 +106,9 @@ And the number of times it was found
 ```
 When I call the `replace` function
 And I pass a single word as the first argument
-And a single word as the second argument
-Then each instance of the first argument in the object's lines is replaced with the second argument
+And I pass a single word as the second argument
+Then each instance of the first argument in the object's lines is replaced with
+the second argument
 ```
 ### #9
 ```
@@ -118,6 +119,6 @@ And the notification states that the given word was replaced `n` times
 ```
 When I call the `replace` function
 And the given word does not exists in any lines
-Then the user receives a notification
+Then I receive a notification
 And the notification states that the given word does not exist
 ```
