@@ -6,7 +6,7 @@
 - Explain the difference between state and behavior
 - Identify state
 - Identify behavior
-- Use TDD to build out behavior and state
+- Use TDD (Test Driven Development) to build out behavior and state
 
 # Set Up
 ```
