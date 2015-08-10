@@ -41,9 +41,9 @@ Using the red, green, refactor flow, write tests for each story below. Write you
 - Always watch the test fail before writing any source code to make it pass (RED).
 - After you have written the source code to make the test pass (GREEN), ask yourself if there is any refactoring that can be done to make the code better
 - Such as:
-  - Readability: Would another developer (or future you!) be able to read your code and quickly understand what it does (variable naming, function naming)?
+  - Readability: Would another developer (or future you!) be able to read your code and quickly understand what it does (variable naming, method naming)?
   - Using `forEach` or `map` instead of a `for` loop
-  - Do you have functions that are bloated? Is there functionality in your code that should be extracted out into it's own function?
+  - Do you have functions that are bloated? Is there functionality in your code that should be extracted out into it's own method?
 
 After any necessary refactoring, you should `add` and `commit` your work using descriptive commit messages (__HINT:__ What does that specific code accomplish? __example:__ `-m "user can add lines"`)
 
@@ -53,7 +53,7 @@ After any necessary refactoring, you should `add` and `commit` your work using d
 ### #1
 ```
 Given I have an instance of the Editor object
-When I call the `write` function on that object
+When I call the `write` method on that object
 And pass the string `Once upon a time at Galvanize...` as an argument
 Then the `lines` property of that object includes that string
 ```
@@ -69,7 +69,7 @@ Then the length of `lines` is 4
 ### User can print all the lines of a given editor
 ### #3
 ```
-When I call the `toString` function on the object
+When I call the `toString` method on the object
 Then that object's lines are returned as a string
 And each line starts with a new line (line break)
 ```
@@ -78,17 +78,17 @@ And each line starts with a new line (line break)
 
 ### #4
 ```
-When I call the `undo` function on the object
+When I call the `undo` method on the object
 Then the most recently added line is deleted
 ```
 ### #5
 ```
-When I call the `undo` function multiple times in a row
+When I call the `undo` method multiple times in a row
 Then the most recently added lines continue to be deleted
 ```
 ### #6
 ```
-When I call the `undo` function
+When I call the `undo` method
 And the object has no lines
 Then `undo` will `throw` an error "This editor has no lines"
 ```
@@ -97,9 +97,9 @@ Then `undo` will `throw` an error "This editor has no lines"
 
 ### #7
 ```
-When I call the `find` function
+When I call the `find` method
 And pass a single word as a string argument
-Then the function returns a notification
+Then the method returns a notification
 And the notification states the word that was searched for
 And the number of times it was found
 ```
@@ -108,7 +108,7 @@ And the number of times it was found
 
 ### #8
 ```
-When I call the `replace` function
+When I call the `replace` method
 And I pass a single word as the first argument
 And I pass a single word as the second argument
 Then each instance of the first argument in the object's lines is replaced with
@@ -121,7 +121,7 @@ And the notification states that the given word was replaced `n` times
 ```
 ### #10
 ```
-When I call the `replace` function
+When I call the `replace` method
 And the given word does not exist in any lines
 Then an error is thrown
 And I am notified that the given word does not exist
