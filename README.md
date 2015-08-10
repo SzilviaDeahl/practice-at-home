@@ -25,6 +25,10 @@ Now that you've got `jasmine` installed, let's get it wired up with a simple tes
 - What files will you need and where should they go?
 - How does your `spec` file know about your source file?
 - What is the syntax for writing a simple, single test that expects `true` to equal `true`? Where could you go to look up the syntax?
+- How do you run your test?
+
+When you've got things all wired up, `commit` and `add` your work with the commit
+message `-m "initial commit"`.
 
 # Exercise
 
