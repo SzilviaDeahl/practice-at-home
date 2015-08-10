@@ -35,13 +35,13 @@ Using the red, green, refactor flow, write tests for each story below. Write you
 #### What is the "red, green, refactor flow?
 
 - Always watch the test fail before writing any source code to make it pass (RED).
-- After you have written the source code to make the test pass (GREEN), ask yourself if there is any refactoring that can be down to make the code better
+- After you have written the source code to make the test pass (GREEN), ask yourself if there is any refactoring that can be done to make the code better
 - Such as:
   - Readability: Would another developer (or future you!) be able to read your code and quickly understand what it does (variable naming, function naming)?
   - Using `forEach` or `map` instead of a `for` loop
   - Do you have functions that are bloated? Is there functionality in your code that should be extracted out into it's own function?
 
-After any necessary refactoring, you should `add` and `commit` your work using descriptive commit messages (__HINT__: What does that specific code accomplish? __example:__ `-m "user can add lines"`)
+After any necessary refactoring, you should `add` and `commit` your work using descriptive commit messages (__HINT:__ What does that specific code accomplish? __example:__ `-m "user can add lines"`)
 
 ## Stories
 
@@ -51,7 +51,7 @@ After any necessary refactoring, you should `add` and `commit` your work using d
 Given I have an instance of the Editor object
 When I call the `write` function on that object
 And pass the string `Once upon a time at Galvanize...` as an argument
-Then the state of the `lines` property of that object includes that string argument.
+Then the `lines` property of that object includes that string
 ```
 
 ### #2
@@ -66,7 +66,7 @@ Then the length of `lines` is 4
 ### #3
 ```
 When I call the `toString` function on the object
-Then that object's lines are returned as a string.
+Then that object's lines are returned as a string
 And each line starts with a new line (line break)
 ```
 
@@ -118,7 +118,13 @@ And the notification states that the given word was replaced `n` times
 ### #10
 ```
 When I call the `replace` function
-And the given word does not exists in any lines
+And the given word does not exist in any lines
 Then I receive a notification
 And the notification states that the given word does not exist
 ```
+
+## More
+
+What other behavior or state could you add here that would be fun?
+Come up with one or two of your own stories (add them to this README), then write
+the tests and make them pass!
